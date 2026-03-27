@@ -2,7 +2,7 @@
 
 In this task we will be experimenting with fragment shaders and introducing some ideas that will be important when we do lighting in week 9.
 
-The template code implements a Quad mesh that draws a black rectangle in NDC coordinates that fills the entire window. No model or camera matrices are implemented. Instead, we will draw on this mesh using a fragment shader (as we did in week 1).
+The template code implements a Quad mesh that draws a black rectangle in NDC coordinates that fills the entire window. No model or camera matrices are implemented. Instead, we will draw on this mesh using a fragment shader.
 
 ## Task 1
 The current fragment shader includes a uniform 2D vector `u_viewportSize` that contains the size of the viewport in pixels. We can use this to calculate the NDC coordinates of a fragment based on its viewport coordinates given by `gl_FragCoord`.
@@ -89,7 +89,9 @@ Implement this. Your result should look like this:
 
 ![An image of the white and yellow circles, with the white circle illuminated when facing the yellow circle, but otherwise black.](images/image7.png)
 
-## Task 6 (Challenge)
+## HD Challenge
+This is an HD-level challenge for students really looking for something tricky!
+
 Add a shadow effect by brightening the parts of space that can be ‘seen’ by the light source:
 
 ![An image of the white and yellow circles, with the white circle illuminated when facing the yellow circle. The ground is also brightened when 'seen' by the light source.](images/image8.png)
@@ -116,8 +118,3 @@ If Q is the closest point to C then the vector n=Q-C is perpendicular to the vec
 	n.v=0
 
 Combining these two equations, you should be able to work out an equation to calculate Q. Using the three cases above, this should allow you to decide whether P should be lit or not.
-
-## To receive a mark today, show your demonstrator:
-* Your conversion of mouse positions to NDC.
-* Your workbook sketches of how light should behave.
-* Your working project up to and including Task 5.
